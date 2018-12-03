@@ -1,0 +1,18 @@
+<form [formGroup] = "todoForm" (ngSubmit)="add()">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Title.." formControlName ="title" id= "myInput">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" class = "addBtn" [disabled]="todoForm.invalid">Primary</button> 
+
+</form>
+
+<ul id ="myUL">
+  <li *ngFor = "let work of works; let i = index">{{work}}
+    <span class= "close" (click)='delete(i)'></span></li>
+</ul>
+<ul>
+  <li>
+    <span class = "test" (click)='lower()'>Test</span>;
+  </li>
+</ul>
